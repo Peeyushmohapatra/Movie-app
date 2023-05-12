@@ -56,13 +56,13 @@ const Moviedetail = () => {
           <div className="movieFullDetails">
             <h2 className="movieTitle">{movie && movie.title}</h2>
             <p>
-              Status: <span>{movie && movie.status}</span>
+              Status: <span>{movie && movie.status} {movie.status === "Released" ? <i class="cross fa-solid fa-circle-check"></i> : <i class=" fa-sharp fa-regular fa-circle-xmark"></i>}</span>
             </p>
             <p>
               Release Date: <span>{movie && movie.release_date}</span>{" "}
             </p>
             <p>
-              RumTime: <span> {movie && movie.runtime} min</span>{" "}
+              RumTime: <span> {movie && movie.runtime} min <i class="clock fa-solid fa-clock"></i></span>
             </p>
 
             <p className="languages">
@@ -99,9 +99,9 @@ const Moviedetail = () => {
               
               <div className="cast">
                 <img src={`https://image.tmdb.org/t/p/original/${cast && cast.profile_path}`} alt="" />
-                <p>{cast.original_name}</p>
-                <p>{cast.character}</p>
-                <p>{(cast.gender === 1 ? "Female" : "Male")}</p>
+                <p className='one'>{cast.original_name}</p>
+                <p className='two'>{cast.character}</p>
+                <p className='three'>{(cast.gender === 1 ? "Female" : "Male")}</p>
               </div>
             )
               
@@ -118,7 +118,7 @@ const Moviedetail = () => {
             </div>
             <div className="youtubeContainer">
               <div className="youtube">
-              {key != undefined ? <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              {key  ? <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                : <h1>Data Not Found</h1>}
               </div>
             </div>

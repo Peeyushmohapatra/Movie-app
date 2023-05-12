@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import "./Navbar.css"
 import { Link, NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
+import logo from "../../Images/Logo.png"
+
 
 
 const Navbar = () => {
@@ -47,7 +49,9 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-        <div className="logo"></div>
+        <div className="logo">
+          <img src="https://static.vecteezy.com/system/resources/previews/012/069/747/original/colorful-lions-head-logo-lions-face-sticker-modern-pop-art-style-dark-black-background-png.png"  alt="" />
+        </div>
         <div className="search">
             <input onChange={(e) => {
               setSearch(e.target.value)

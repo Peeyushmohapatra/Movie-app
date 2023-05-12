@@ -13,8 +13,8 @@ const Upcoming = () => {
     })
   return (
     <div className='upcoming'>
-        <h1>Upcoming Movies</h1>
-        <div className="cardContainer">
+        <h1 className="header">Upcoming Movies</h1>
+        {upcoming ? <div className="cardContainer">
         {upcoming &&
           upcoming.map((movie) => {
             return (
@@ -24,7 +24,7 @@ const Upcoming = () => {
             </Link>
             )
           })}
-      </div>
+      </div> : null}
     </div>
   )
 }

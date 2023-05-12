@@ -42,7 +42,7 @@ const Home = () => {
                   </div>
                   <div className="posterImage_releasingDate_rating">
                     {ele && ele.release_date}
-                    <span>{ele && ele.vote_average}</span>
+                    <span>{ele && ele.vote_average} <i className="rating fa-brands fa-imdb"></i></span>
                   </div>
                   <div className="posterImageDescription">
                     {ele && ele.overview}

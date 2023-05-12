@@ -1,4 +1,27 @@
 
+@media screen and (width<=768px) {
+ 
+  .carousel-root {
+    height: 400px;
+    width: 100%;
+  }
+ 
+  .posterImage {
+    height: 400px;
+    width: 100%;
+    display: flex;
+  }
+
+  .posterImage_title {
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+
+}
+
+
 .home{
   width: 100%;
   background-color: black;
@@ -45,6 +68,7 @@
   /* opacity: .5; */
   /* transition: opacity .5s; */
   /* background: rgba(0, 0, 0, 0.6); */
+  color: rgb(12,222,242);
 }
 
 .control-dots{

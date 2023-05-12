@@ -23,7 +23,7 @@ const Search = () => {
         {searchData ? <>
         
             <div className="searchingFor">
-                <h1>Here are few results for "{movieName}"</h1>
+                <h1>Results for "{movieName}"</h1>
                 
             </div>
             <div className="searchContainer">

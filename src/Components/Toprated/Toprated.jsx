@@ -11,8 +11,8 @@ const Toprated = () => {
     })
   return (
     <div className='toprated'>
-        <h1>Top-Rated Movies</h1>
-        <div className="cardContainer">
+        <h1 className="header">Top-Rated Movies</h1>
+        {topRated ? <div className="cardContainer">
         {topRated &&
           topRated.map((movie) => {
             return (
@@ -21,7 +21,7 @@ const Toprated = () => {
             </Link>
             )
           })}
-      </div>
+      </div>  : null}
     </div>
   )
 }

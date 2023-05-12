@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Trending.css"
 import { useSelector } from 'react-redux'
 import Common from '../Common/Common'
 import { Link } from 'react-router-dom'
@@ -10,8 +11,8 @@ const Trending = () => {
     })
   return (
     <div className='trending'>
-        <h1>Trending Movies</h1>
-        <div className="cardContainer">
+        <h1 className="header">Trending Movies</h1>
+        {trending ? <div className="cardContainer">
         {trending &&
           trending.map((movie) => {
             return (
@@ -21,7 +22,7 @@ const Trending = () => {
             </Link>
             )
           })}
-      </div>
+      </div> : null}
     </div>
   )
 }

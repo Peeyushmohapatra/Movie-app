@@ -1,97 +1,155 @@
-.allmovieContainer{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Teko&display=swap');
 
-.cardContainer{
-    width: 100%;
-    display: flex;
-    padding: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-.allmovieCard{
-    height: 350px;
-    width: 250px;
-    border: 2px solid red;
-    border-radius: 8px;
-    position: relative;
-    cursor: pointer;
-    transition: .7s;
-}
-
-
-.allmovieCard:hover{
-    transform: scale(1.1);
-}
-
-
-
-.movieData{
-    position: absolute;
-    padding: 1rem;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    border: 2px solid red;
-    display: flex;
-    /* border-radius: 15px; */
-    border-radius: 5px 20px 5px;
-  
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    background-image: linear-gradient(
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.5),
-      rgb(0, 0, 1)
-    );
-    opacity: 0;
-    transition: opacity 0.3s;
-    color: white;
-    gap: 15px;
-    transition: 1s;
-}
-
-
-
-.movieData:hover{
-    opacity: 1;
-}
-
-.titleContainer1{
-    width: 100%;
-}
-
-.dataContainer{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
+@media screen and (width<=1300px) {
+ 
+    .carousel-root {
+      height: 400px;
+      width: 100%;
+    }
+    .posterImage {
+        height: 400px;
+        width: 100%;
+        display: flex;
+      }
     
+      .posterImage_title {
+        font-weight: 900;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .posterImage_releasingDate_rating {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .posterImageDescription {
+        font-size: 0.7rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        display: flex;
+        text-align: left;
+        width: 98%;
+      }
+
+
+      .allmovieCard {
+        height: 100px;
+        width: 150px;
+        border: 2px solid red;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        transition: 0.7s;
+        font-family: 'Alkatra', cursive;
+      }
+
+}
+.allmovieContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(25, 24, 31);
 }
 
-.releaseDate{
-    display: flex;
-    gap: 5px;
+.cardContainer {
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.calender{
-    font-size: 0.9rem;
-    color: green;
+.allmovieCard {
+  height: 350px;
+  width: 250px;
+  border: 2px solid red;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.7s;
+  font-family: 'Alkatra', cursive;
 }
 
-.imdb{
-    display: flex;
-    gap: 5px;
+.allmovieCard:hover {
+  transform: scale(1.1);
 }
 
-.rating{
-    color: gold;
-    transition: 1s;
+.movieData {
+  position: absolute;
+  padding: 1rem;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 3px solid rgb(13, 154, 252);
+  display: flex;
+  /* border-radius: 15px; */
+  border-radius: 5px 20px 5px;
+
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5),
+    rgb(0, 0, 1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: white;
+  gap: 15px;
+  transition: 1s;
+  color: rgb(13,153,251);
 
 }
 
+.movieData:hover {
+  opacity: 1;
+}
+
+.titleContainer1 {
+  width: 100%;
+}
+
+.dataContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.releaseDate {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.calender {
+  font-size: 0.9rem;
+  color: rgb(65,188,132);
+}
+
+.imdb {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.rating {
+  color: gold;
+  transition: 1s;
+}
+
+.mainPosterImage {
+  border-radius: 5px 20px 5px;
+}
+
+.posterImage_overlay {
+  font-family: "Chakra Petch", sans-serif;
+  font-family: "Teko", sans-serif;
+  letter-spacing: 0.1rem;
+}

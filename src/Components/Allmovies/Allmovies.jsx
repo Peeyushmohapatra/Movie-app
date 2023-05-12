@@ -11,9 +11,9 @@ const Allmovies = () => {
   });
   return (
     <div className="allmovieContainer">
-      <h1>All Movies</h1>
+      <h1 className="header">All Movies</h1>
       
-      <div className="cardContainer">
+      {movies ? <div className="cardContainer">
         {movies &&
           movies.map((movie) => {
             return (
@@ -23,7 +23,7 @@ const Allmovies = () => {
                 
             )
           })}
-      </div>
+      </div>  : null}
     </div>
   );
 };
