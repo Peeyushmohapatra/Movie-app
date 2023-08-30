@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import "./Popular.css"
 import Cards from '../Cards/Cards'
 import { useSelector } from 'react-redux'
@@ -16,4 +16,4 @@ const Popular = () => {
   )
 }
 
-export default Popular
+export default memo(Popular)

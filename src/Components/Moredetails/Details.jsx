@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./Details.css";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -52,4 +52,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default memo(Details);

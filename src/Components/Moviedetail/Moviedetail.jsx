@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./Moviedetail.css";
 import Image from "react-bootstrap/Image";
 import { credits, movieDetails, trailer } from "../../Functions/functions";
@@ -125,4 +125,4 @@ const Moviedetail = () => {
   );
 };
 
-export default Moviedetail;
+export default memo(Moviedetail);

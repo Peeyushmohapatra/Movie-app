@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import "./Search.css"
 import Cards from '../Cards/Cards'
 import { useSelector } from 'react-redux'
@@ -14,4 +14,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default memo(Search)

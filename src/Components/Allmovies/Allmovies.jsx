@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import "./Allmovies.css"
 import Cards from '../Cards/Cards'
 import { useSelector } from 'react-redux';
@@ -45,4 +45,4 @@ const Allmovies = () => {
   )
 }
 
-export default Allmovies
+export default memo(Allmovies)

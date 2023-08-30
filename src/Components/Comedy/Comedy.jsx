@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import Posterslider from '../Image-Slider/Posterslider'
 import Cards from '../Cards/Cards'
@@ -17,4 +17,4 @@ const Comedy = () => {
   )
 }
 
-export default Comedy
+export default memo(Comedy)

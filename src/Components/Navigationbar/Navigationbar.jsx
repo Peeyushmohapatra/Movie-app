@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -99,4 +99,4 @@ const Navigationbar = () => {
   );
 };
 
-export default Navigationbar;
+export default memo(Navigationbar);

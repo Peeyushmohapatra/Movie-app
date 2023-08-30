@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import "./Mymovie.css"
 import { credits, movieDetails, trailer } from "../../Functions/functions";
 import { useParams } from "react-router-dom";
@@ -64,4 +64,4 @@ const Mymovie = () => {
   )
 }
 
-export default Mymovie
+export default memo(Mymovie)

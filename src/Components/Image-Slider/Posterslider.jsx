@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "./Posterslider.css";
 import { Link } from "react-router-dom";
@@ -49,4 +49,4 @@ const Posterslider = ({showMovies}) => {
   );
 };
 
-export default Posterslider;
+export default memo(Posterslider);

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./Cast.css";
 // import Col from "react-bootstrap/Col";
 // import Container from "react-bootstrap/Container";
@@ -57,4 +57,4 @@ const Cast = () => {
   );
 };
 
-export default Cast;
+export default memo(Cast);

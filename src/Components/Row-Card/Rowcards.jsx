@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import "./Rowcards.css"
 import { Link } from 'react-router-dom'
 import Cards from '../Cards/Cards'
@@ -43,4 +43,4 @@ const Rowcards = ({movies}) => {
   )
 }
 
-export default Rowcards
+export default memo(Rowcards)
