@@ -8,7 +8,7 @@ import Skeletons from "../Skeletons/Skeletons";
 const Cards = ({ movies }) => {
   return (
     <>
-      {movies.length ? (
+      {movies.length !== 0 ? (
         <>
             <div className="card_container">
             {movies.map((movie) => {

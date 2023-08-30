@@ -92,6 +92,10 @@ const Navigationbar = () => {
               />
               <Link to="/search">
               <Button onClick={() => {
+                dispatch({
+                  type:"search_for",
+                  data:input
+                })
                 search(dispatch,input,allMovies)
               }} variant="outline-success">Search</Button>
               </Link>

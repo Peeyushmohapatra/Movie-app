@@ -5,38 +5,37 @@
   display: flex;
 }
 
-.caption{
+.caption {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.377),rgba(0, 0, 0, 0.5));
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0.217), rgb(0, 0, 0));
   top: 0;
   display: flex;
 }
 
-.innercaption{
+.innercaption {
   display: flex;
   width: 70%;
   height: 100%;
   align-items: end;
 }
 
-.movieposter_container{
+.movieposter_container {
   height: 100%;
   width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-#movieposter_container_image{
+#movieposter_container_image {
   height: 80%;
   width: 60%;
   border-radius: 30px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
-
 
 #movieDiscription {
   display: flex;
@@ -72,13 +71,17 @@
   width: 100%;
 }
 
-
-.carousel-caption{
+.carousel-caption {
   /* border: 5px solid blue; */
-  position: static!important;
-  color: white!important;
-  text-align: start!important;
-  padding: 0 2rem;
+  position: static !important;
+  color: white !important;
+  text-align: start !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1.5rem 2rem;
+  background-color: #FFE53B;
+background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+ 
 }
 
 /* .movie_poster{
@@ -92,8 +95,7 @@
   border: 3px solid red;
 } */
 
-
-@media screen and (max-width : 500px) {
+@media screen and (max-width: 500px) {
   .carousel {
     height: 40vh;
     width: 100%;
@@ -101,14 +103,15 @@
     display: flex;
   }
 
-  #movieposter_container_image{
+  #movieposter_container_image {
     height: 70%;
     width: 90%;
     border-radius: 20px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   }
 
-  .carousel-caption{
+  .carousel-caption {
     /* border: 5px solid blue; */
     /* position: static!important;
     color: white!important;
@@ -117,7 +120,7 @@
     font-size: 0.4rem;
   }
 
-  .carousel-caption h1{
+  .carousel-caption h1 {
     font-size: 0.7rem;
   }
 

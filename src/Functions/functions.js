@@ -138,15 +138,14 @@ export async function horror(dispatch){
         type:"horror",
         data:arr
     })
-    return arr
 }
 
+
 export async function allFunctions(dispatch){
-    const all = Promise.allSettled([popular(dispatch),topRated(dispatch),action(dispatch),comedy(dispatch),horror(dispatch),upComing(dispatch),trending(dispatch)])
-    all.then((res) => {
-        console.log(res);
-    })
+    Promise.allSettled([popular(dispatch),topRated(dispatch),action(dispatch),comedy(dispatch),horror(dispatch),upComing(dispatch),trending(dispatch)])
 } 
+
+
 
 
 export async function movieDetails(id,setMovie){
@@ -184,19 +183,13 @@ export async function trailer(id,dispatch){
   
 }
 
-
 export async function allMoviedetails(id,dispatch,setMovie){
     Promise.allSettled([movieDetails(id, setMovie),credits(id, dispatch),trailer(id,dispatch)])
-    // movieDetails(id, setMovie);
-    // credits(id, dispatch);
-    // trailer(id, dispatch,navigate);
 }
+
 
 export function search(dispatch,input,all){
     const movieArr = [];
-
-    
-
     const movie = all.filter((movies) => {
         if((movies.title.toLowerCase()).includes(input.toLowerCase())){
             return movies

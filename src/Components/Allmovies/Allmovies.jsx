@@ -1,6 +1,5 @@
 import React, { memo,lazy,Suspense } from 'react'
 import "./Allmovies.css"
-import Cards from '../Cards/Cards'
 import { useSelector } from 'react-redux';
 import Posterslider from '../Image-Slider/Posterslider';
 import Skeletons from '../Skeletons/Skeletons';

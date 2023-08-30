@@ -1,8 +1,7 @@
 import React, { memo, useEffect, useState } from "react";
 import "./Moviedetail.css";
-import Image from "react-bootstrap/Image";
-import { allMoviedetails, credits, movieDetails, trailer } from "../../Functions/functions";
-import { useNavigate, useParams } from "react-router-dom";
+import { allMoviedetails } from "../../Functions/functions";
+import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { useDispatch, useSelector } from "react-redux";
 import Cast from "../Cast/Cast";
@@ -17,10 +16,9 @@ const Moviedetail = () => {
     return state.videoKey;
   });
 
-  const navigate = useNavigate()
   useEffect(() => {
     allMoviedetails(id,dispatch,setMovie)
-  }, [dispatch]);
+  }, [dispatch,id]);
 
   return (
     <div className="div">
@@ -33,7 +31,7 @@ const Moviedetail = () => {
         />
         <div className="overlay">
           
-          <h1
+          <h1 className="stylist_movie_heading"
             style={{
               backgroundImage:`url(https://image.tmdb.org/t/p/original/${
                 movie && movie.backdrop_path
@@ -57,7 +55,6 @@ const Moviedetail = () => {
             </div>
           </div>
           <div className="movie-data-container">
-            {/* <h1>{movie.original_title}</h1> */}
             <h5><span>Status:</span> <span id="span_details">{movie.status}</span></h5>
             <h5><span>Release Date:</span> <span id="span_details">{movie.release_date}</span></h5>
             <div className="lang">

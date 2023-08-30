@@ -4,6 +4,10 @@
   min-height: 90vh;
 }
 
+.stylist_movie_heading{
+  text-align: center;
+}
+
 .movieImageContainer {
   height: 70vh;
   width: 100%;

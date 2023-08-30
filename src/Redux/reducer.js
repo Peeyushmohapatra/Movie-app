@@ -1,4 +1,4 @@
-export function reducer (state={all:[],popular:[],topRated:[],upcoming:[],trending:[],cast:[],videoKey:"",search:[],comedy:[],action:[],horror:[]}, action) {
+export function reducer (state={all:[],popular:[],topRated:[],upcoming:[],trending:[],cast:[],videoKey:"",search:[],comedy:[],action:[],horror:[],searchFor:""}, action) {
     if(action.type === "popular"){
         return {
             ...state,
@@ -30,18 +30,21 @@ export function reducer (state={all:[],popular:[],topRated:[],upcoming:[],trendi
     else if(action.type === "comedy"){
         return {
             ...state,
+            all:[...state.all,...action.data],
             comedy:action.data
         }
     }
     else if(action.type === "action"){
         return {
             ...state,
+            all:[...state.all,...action.data],
             action:action.data
         }
     }
     else if(action.type === "horror"){
         return {
             ...state,
+            all:[...state.all,...action.data],
             horror:action.data
         }
     }
@@ -61,6 +64,12 @@ export function reducer (state={all:[],popular:[],topRated:[],upcoming:[],trendi
         return {
             ...state,
             search:action.data
+        }
+    }
+    else if(action.type === "search_for"){
+        return {
+            ...state,
+            searchFor:action.data
         }
     }
     return state

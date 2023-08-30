@@ -1,5 +1,5 @@
 .popularContainer {
-    height: 45vh;
+    height: 50vh;
     min-width: 100%;
     display: flex;
     gap: 30px;
@@ -33,6 +33,11 @@
     border-radius: 30px;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 1.5s ease;
+  }
+
+  .movie_cards1:hover{
+    transform: scale(1.1);
   }
 
   .imageContainer{
@@ -104,7 +109,7 @@
 
 @media screen and (max-width : 500px) {
     .popularContainer {
-        height: 30vh;
+        height: 40vh;
         min-width: 100%;
         display: flex;
         gap: 30px;
@@ -131,6 +136,10 @@
         border-radius: 20px;
         background-repeat: no-repeat;
         background-size: cover;
+      }
+
+      .movie_cards1:hover{
+        transform: scale(1.01);
       }
 
       .imageContainer img{

@@ -1,7 +1,6 @@
 import React, { memo } from 'react'
 import "./Rowcards.css"
 import { Link } from 'react-router-dom'
-import Cards from '../Cards/Cards'
 
 
 const Rowcards = ({movies}) => {
@@ -14,12 +13,6 @@ const Rowcards = ({movies}) => {
                   <div className="movie_cards1" style={{backgroundImage: movie.poster_path == null ?  "url(https://thumbs.dreamstime.com/b/no-image-available-icon-isolated-dark-background-simple-vector-logo-no-image-available-icon-isolated-dark-background-275079095.jpg)" :`url(https://image.tmdb.org/t/p/original/${
                         movie && movie.poster_path
                       })`}}>
-                    {/* <img
-                      src={`https://image.tmdb.org/t/p/original/${
-                        movie && movie.poster_path
-                      }`}
-                      alt=""
-                    /> */}
                     <div className="trial1">
                       <h6>{movie.original_title}</h6>
                       <div className="ratingContainer1">

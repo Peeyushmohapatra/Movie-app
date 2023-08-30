@@ -15,6 +15,7 @@ import Search from "./Components/Search/Search";
 import Comedy from "./Components/Comedy/Comedy";
 import Action from "./Components/Action/Action";
 import Horror from "./Components/Horror/Horror";
+import Footer from "./Components/Footer/Footer";
 
 
 
@@ -43,6 +44,7 @@ function App() {
           <Route path="/search" element={<Search/>} />
         </Routes>
       </div>
+      <Footer/>
     </>
   );
 }
