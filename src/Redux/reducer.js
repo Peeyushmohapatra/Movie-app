@@ -1,60 +1,66 @@
-export const reducer = (state={all:[],popular:[],top_rated:[],upcoming:[],trending:[],cast:[],key:"",searchMovie:[],movieName:""},action) => {
+export function reducer (state={all:[],popular:[],topRated:[],upcoming:[],trending:[],cast:[],videoKey:"",search:[],comedy:[],action:[],horror:[]}, action) {
     if(action.type === "popular"){
         return {
             ...state,
-            popular:action.data,
-            all:[...state.all,...action.data]
+            all:[...state.all,...action.data],
+            popular:action.data
         }
     }
-
     else if(action.type === "top_rated"){
         return {
             ...state,
-            top_rated:action.data,
-            all:[...state.all,...action.data]
+            all:[...state.all,...action.data],
+            topRated:action.data
         }
     }
     else if(action.type === "upcoming"){
         return {
             ...state,
-            upcoming:action.data,
-            all:[...state.all,...action.data]
+            all:[...state.all,...action.data],
+            upcoming:action.data
         }
     }
     else if(action.type === "trending"){
         return {
             ...state,
-            trending:action.data,
-            all:[...state.all,...action.data]
+            all:[...state.all,...action.data],
+            trending:action.data
+        }
+    }
+    else if(action.type === "comedy"){
+        return {
+            ...state,
+            comedy:action.data
+        }
+    }
+    else if(action.type === "action"){
+        return {
+            ...state,
+            action:action.data
+        }
+    }
+    else if(action.type === "horror"){
+        return {
+            ...state,
+            horror:action.data
         }
     }
     else if(action.type === "cast"){
         return {
             ...state,
-            cast:action.data,
+            cast:action.data
         }
     }
     else if(action.type === "video-key"){
-        // console.log(action.data,"KEEEEEEEEEEEEEEEYYYYYYYYYYYYYYY");
         return {
             ...state,
-            key:action.data,
+            videoKey:action.data
         }
     }
-
-    else if(action.type === "search-data"){
-        console.log(action.data,"data");
+    else if(action.type === "search_movie"){
         return {
             ...state,
-            searchMovie:action.data,
-        }
-    }
-
-    else if(action.type === "movie-name"){
-        console.log(action.data,"data");
-        return {
-            ...state,
-            movieName:action.data,
+            search:action.data
         }
     }
     return state

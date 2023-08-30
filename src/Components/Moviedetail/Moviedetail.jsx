@@ -1,146 +1,128 @@
-import React, { useEffect, useState } from 'react'
-import "./Moviedetail.css"
-import { useParams } from 'react-router-dom'
-import { credits, trailer } from '../../functions'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect, useState } from "react";
+import "./Moviedetail.css";
+import Image from "react-bootstrap/Image";
+import { credits, movieDetails, trailer } from "../../Functions/functions";
+import { useNavigate, useParams } from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import { useDispatch, useSelector } from "react-redux";
+import Cast from "../Cast/Cast";
+import CloseButton from "react-bootstrap/CloseButton";
 
 const Moviedetail = () => {
+  const [movie, setMovie] = useState([]);
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const [display, setDisplay] = useState(false);
+  const videoKey = useSelector((state) => {
+    return state.videoKey;
+  });
 
-  const [movie,setMovie] = useState([])
-  const [videoDiv,setVideodiv] = useState(false)
-  const {id} = useParams()
-  const {name} = useParams()
-  const dispatch = useDispatch()
-
-  const data = useSelector((state => {
-    return state
-  }));
-  const key = useSelector((state => {
-    return state.key
-  }));
-
-
-
-  async function findMovie(id){
-    const api = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63`);
-    const response = await api.text();
-    const jsonData = JSON.parse(response);
-    setMovie(jsonData)
-  }
-
+  const navigate = useNavigate()
   useEffect(() => {
-    credits(id,dispatch)
-    trailer(id,name,dispatch)
-    findMovie(id)
-  },[])
+    movieDetails(id, setMovie);
+    credits(id, dispatch);
+    trailer(id, dispatch,navigate);
+  }, [dispatch]);
 
   return (
-    <div className='moviedetail'>
-      {movie.length !==0 && <>
-      
-      <div className="moviePoster">
-        <img className='moviedetailImage' src={`https://image.tmdb.org/t/p/original/${movie && movie.backdrop_path}`} alt=""/>
-        <div className="innermoviePoster"></div>
-        
-      </div>
-
-      <div className="finalTrial">
-          <div className="trial">
-          <img
+    <div className="div">
+      <div className="movieImageContainer">
+        <img
           src={`https://image.tmdb.org/t/p/original/${
-            movie && movie.poster_path
+            movie && movie.backdrop_path
           }`}
+          alt=""
         />
+        <div className="overlay">
+          <h1
+            style={{
+              backgroundImage: `url(https://image.tmdb.org/t/p/original/${
+                movie && movie.backdrop_path
+              })`,
+            }}
+          >
+            {movie.original_title}
+          </h1>
+        </div>
+      </div>
+      <div className="movie-details-container">
+        <div className="upper-container">
+          <div className="movie-poster-container">
+            <div className="movie-poster">
+              <img
+                src={`https://image.tmdb.org/t/p/original/${
+                  movie && movie.poster_path
+                }`}
+                alt=""
+              />
+            </div>
           </div>
-
-          <div className="movieFullDetails">
-            <h2 className="movieTitle">{movie && movie.title}</h2>
-            <p>
-              Status: <span>{movie && movie.status} {movie.status === "Released" ? <i class="cross fa-solid fa-circle-check"></i> : <i class=" fa-sharp fa-regular fa-circle-xmark"></i>}</span>
-            </p>
-            <p>
-              Release Date: <span>{movie && movie.release_date}</span>{" "}
-            </p>
-            <p>
-              RumTime: <span> {movie && movie.runtime} min <i class="clock fa-solid fa-clock"></i></span>
-            </p>
-
-            <p className="languages">
-              Languages:
-              {movie.length !==0 &&
+          <div className="movie-data-container">
+            {/* <h1>{movie.original_title}</h1> */}
+            <h5>Status: {movie.status}</h5>
+            <h5>Status: {movie.release_date}</h5>
+            <div className="lang">
+              <h5>Languages: </h5>
+              {movie.length !== 0 &&
                 movie.spoken_languages.map((ele) => {
-                  return <>{<span>{`${ele.english_name} `}</span>}</>;
+                  return (
+                    <Button variant="outline-primary">
+                      {ele.english_name}
+                    </Button>
+                  );
                 })}
-            </p>
-            <p className="languages">
-              Genres:
-              {movie &&
+            </div>
+            <h5>Runtime: {movie.runtime} Minutes</h5>
+
+            <div className="lang">
+              <h5>Genres: </h5>
+              {movie.length !== 0 &&
                 movie.genres.map((ele) => {
-                  return <>{<span>{`${ele.name} `}</span>}</>;
+                  return <Button variant="outline-primary">{ele.name}</Button>;
                 })}
-            </p>
-
-            <p>
-              Rating: <span>{movie && movie.vote_average.toFixed(1)}</span>{" "}<i className="rating fa-brands fa-imdb"></i>
-            </p>
-            <p>
-              Description: <span>{movie && movie.overview}</span>
-            </p>
-            <button onClick={() => {
-              setVideodiv(true)
-            }} className='trailer'><i className="fa-solid fa-play"></i> Trailer</button>
+            </div>
+            <h5>
+              Rating: {movie.length !== 0 && movie.vote_average.toFixed(0)}{" "}
+              <i className="imdbic fa-brands fa-imdb"></i>
+            </h5>
+            <div className="overview">
+              <h5>Description: </h5>
+              <p> {movie.overview}</p>
+            </div>
+            <div>
+              <Button
+                onClick={() => {
+                  setDisplay(true);
+                }}
+                variant="outline-info"
+              >
+                <i className="fa-solid fa-play"></i> Movie Trailer
+              </Button>{" "}
+            </div>
           </div>
-        </div>
-
-
-        <div className="castDetails">
-          {data.cast && data.cast.map((cast) => {
-            return (
-              
-              <div className="cast">
-                <img src={`https://image.tmdb.org/t/p/original/${cast && cast.profile_path}`} alt="" />
-                <p className='one'>{cast.original_name}</p>
-                <p className='two'>{cast.character}</p>
-                <p className='three'>{(cast.gender === 1 ? "Female" : "Male")}</p>
-              </div>
-            )
-              
-            
-          })}
-          
-        </div>
-
-          <div style={{display:(videoDiv === true ? "flex" : "none")}} className='videoContainer'>
+          <div style={{display:(display === true ? "flex" : "none")}} className='videoContainer'>
             <div className="upperContainer">
-              <button onClick={() => {
-                setVideodiv(false)
-              }}><i className="cross fa-solid fa-xmark"></i></button>
+            <CloseButton
+                  variant="white"
+                  onClick={() => {
+                    setDisplay(false);
+                  }}
+                />
             </div>
             <div className="youtubeContainer">
               <div className="youtube">
-              {key  ? <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              {videoKey  ? <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${videoKey}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                : <h1>Data Not Found</h1>}
               </div>
             </div>
           </div>
-      </>
-      }
-      
+        </div>
+        <div className="cast-container">
+          <Cast />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Moviedetail
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Moviedetail;

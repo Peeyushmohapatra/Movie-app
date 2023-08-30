@@ -1,0 +1,72 @@
+.outer-my-movie-container{
+    position: relative;
+    background-color: transparent;
+    height: 91.1vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-movie-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+}
+
+.movie-data-container1{
+    height: 85%;
+    width: 80%;
+    position: absolute;
+    /* border: 5px solid green; */
+    background-color: transparent;
+    display: flex;
+    background: linear-gradient(black,rgba(0, 0, 0, 0.568));
+    box-shadow: rgba(0, 0, 0, 0.534) 1.95px 1.95px 2.6px;
+}
+
+.left-container{
+    height: 100%;
+    width: 60%;
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+}
+.right-container{
+    height: 100%;
+    width: 40%;
+    /* border: 2px solid green; */
+    position: relative;
+    animation: animate 20s linear infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* .right-container{
+    height: 100%;
+    width: 0%;
+    animation: animate 20s linear infinite;
+} */
+
+.overlay1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.342);
+    top: 0;
+}
+
+@keyframes animate{
+    0%,100%{
+        background-position: top;
+    }
+
+    45%,55%{
+        background-position: bottom;
+    }
+}

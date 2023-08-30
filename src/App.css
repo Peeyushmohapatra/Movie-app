@@ -1,11 +1,7 @@
-.App {
-  height: 100%;
+.App{
   width: 100%;
-  background-color: black;
-  overflow-x: hidden;
-}
-
-.header {
-  color: rgb(13, 154, 252);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  min-height: 100vh;
 }

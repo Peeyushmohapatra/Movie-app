@@ -1,54 +1,60 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
-import { popular, topRated, trending, upComing } from "./functions";
-import { useDispatch, useSelector } from "react-redux";
-import Home from "./Components/Home/Home";
-import Navbar from "./Components/Navbar/Navbar";
+import Posterslider from "./Components/Image-Slider/Posterslider";
+import Navigationbar from "./Components/Navigationbar/Navigationbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useDispatch } from "react-redux";
+import { action, comedy, horror, popular, topRated, trending, upComing } from "./Functions/functions";
+import {Routes,Route} from "react-router-dom"
 import Allmovies from "./Components/Allmovies/Allmovies";
-import Pupular from "./Components/Popular/Pupular";
-import Toprated from "./Components/Toprated/Toprated";
+import Popular from "./Components/Popular/Popular";
+import Toprated from "./Components/Top-Rated/Toprated";
 import Upcoming from "./Components/Upcoming/Upcoming";
-import {Route,Routes} from "react-router-dom"
-import Moviedetail from "./Components/Moviedetail/Moviedetail";
 import Trending from "./Components/Trending/Trending";
-import Search from "./Components/Seacrh/Search";
+// import Moviedetail from "./Components/Moviedetail/Moviedetail";
+// import Details from "./Components/Moredetails/Details"
+import Moviedetail from "./Components/Moviedetail/Moviedetail";
+import Mymovie from "./Components/Mymovie/Mymovie";
+import Search from "./Components/Search/Search";
+import Comedy from "./Components/Comedy/Comedy";
+import Action from "./Components/Action/Action";
+import Horror from "./Components/Horror/Horror";
+
 
 
 
 function App() {
+  const dispatch = useDispatch();
 
-  const data = useSelector((state) => {
-    return state
-  })
-
-  const dispatch = useDispatch()
   useEffect(() => {
-   if(data.all.length === 0 && data.popular.length === 0 && data.upcoming.length === 0 && data.top_rated.length === 0 ){
-    popular(dispatch)
-   topRated(dispatch)
-   upComing(dispatch)
-   trending(dispatch)
-   }
-  }, [])
-  
-  return <div className="App">
-
-      <Navbar/>
-    <Routes>
-
-    <Route path="/" element={<><Home/><Allmovies/></>} />
-    <Route path="/all" element={<><Home/><Allmovies/></>} />
-    <Route path="/popular" element={<><Home/><Pupular/></>} />
-    <Route path="/toprated" element={<><Home/><Toprated/></>} />
-    <Route path="/upcoming" element={<><Home/><Upcoming/></>} />
-    <Route path="/trending" element={<><Home/><Trending/></>} />
-    <Route path="/all/:id/:name" element={<Moviedetail/>} />
-    <Route path="/search" element={<Search/>} />
-
-    </Routes>
-    
-  
-  </div>;
+    popular(dispatch);
+    topRated(dispatch);
+    upComing(dispatch);
+    trending(dispatch);
+    comedy(dispatch);
+    action(dispatch)
+    horror(dispatch)
+  }, []);
+  return (
+    <>
+      <Navigationbar/> 
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<><Allmovies/></>}/>
+          <Route path="/home" element={<><Allmovies/></>}/>
+          <Route path="/popular" element={<Popular/>} />
+          <Route path="/top-rated" element={<Toprated/>} />
+          <Route path="/upcoming" element={<Upcoming/>} />
+          <Route path="/comedy" element={<Comedy/>} />
+          <Route path="/action" element={<Action/>} />
+          <Route path="/trending" element={<Trending/>} />
+          <Route path="/horror" element={<Horror/>} />
+          <Route path="/moviedetails/:id" element={<Moviedetail/>} />
+          <Route path="/search" element={<Search/>} />
+        </Routes>
+      </div>
+    </>
+  );
 }
 
 export default App;
