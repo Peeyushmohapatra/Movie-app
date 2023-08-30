@@ -16,7 +16,7 @@ const Allmovies = () => {
           <h1>POPULAR MOVIES</h1>
 
          
-          {allMovies.popular.length === 0 ? <Rowcards movies={allMovies.popular} /> : <Skeletons/>}
+          {allMovies.popular.length !== 0 ? <Rowcards movies={allMovies.popular} /> : <Skeletons/>}
             
         </div>
         <div className="upcoming_movie_container movies_container">
