@@ -117,6 +117,8 @@ const Moviedetail = () => {
           </div>
         </div>
         <div className="cast-container">
+          <h1 className="cast_heading">MOVIE <i>CAST</i></h1>
+          <br />
           <Cast />
         </div>
       </div>
