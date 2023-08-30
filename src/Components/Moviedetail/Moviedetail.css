@@ -110,7 +110,7 @@
 }
 
 .movie-data-container {
-  height: 80vh;
+  min-height: 80vh;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -198,13 +198,17 @@
 
 @media screen and (max-width: 500px) {
   .movieImageContainer {
-    height: 50vh;
+    height: 30vh;
     width: 100%;
     display: flex;
     position: relative;
     background-color: black;
   }
 
+  .overlay{
+    justify-content: center;
+    align-items: center;
+  }
   .overlay h1 {
     font-size: 2rem;
     padding: 0 1.5rem;
@@ -217,6 +221,7 @@
   }
 
   .upper-container {
+    min-height: 40vh;
     flex-direction: column;
   }
 
@@ -225,14 +230,19 @@
     width: 100%;
   }
 
+  .movie-poster{
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+  }
   .movie-poster img {
     height: 100%;
-    width: 60%;
+    width: 70%;
     box-shadow: 0.5rem 0.5rem red, -0.5rem -0.5rem rgb(13, 154, 252);
   }
 
   .movie-data-container {
-    height: 80vh;
+    min-height: 10vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -263,5 +273,9 @@
     height: 80%;
     width: 95%;
     background-color: rgba(0, 0, 0, 0.457);
+  }
+
+  .videoContainer {
+    top: 70px;
   }
 }

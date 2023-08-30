@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Navigationbar.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { search } from "../../Functions/functions";
 import { useDispatch, useSelector } from "react-redux";
 import Main from "../../Logo/Main.png"
@@ -14,14 +14,17 @@ import Main from "../../Logo/Main.png"
 const Navigationbar = () => {
   const [input,setInput] = useState("");
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const allMovies = useSelector((state) => {
     return state.all
   })
   return (
       <Navbar sticky="top" data-bs-theme="dark" expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <Navbar.Brand href={Main}>
-            <img id="main_logo" src={Main} alt="" />
+          <Navbar.Brand>
+            <img onClick={() => {
+              navigate("/")
+            }} id="main_logo" src={Main} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
