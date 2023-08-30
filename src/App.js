@@ -3,7 +3,7 @@ import "./App.css";
 import Navigationbar from "./Components/Navigationbar/Navigationbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch } from "react-redux";
-import { action, comedy, horror, popular, topRated, trending, upComing } from "./Functions/functions";
+import {allFunctions} from "./Functions/functions";
 import {Routes,Route} from "react-router-dom"
 import Allmovies from "./Components/Allmovies/Allmovies";
 import Popular from "./Components/Popular/Popular";
@@ -23,14 +23,8 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    popular(dispatch);
-    topRated(dispatch);
-    upComing(dispatch);
-    trending(dispatch);
-    comedy(dispatch);
-    action(dispatch)
-    horror(dispatch)
-  }, []);
+    allFunctions(dispatch)
+  }, [dispatch]);
   return (
     <>
       <Navigationbar/> 

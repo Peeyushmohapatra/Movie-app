@@ -11,7 +11,7 @@ const Posterslider = ({showMovies}) => {
         {showMovies &&
           showMovies.map((movie) => {
             return (
-              <Carousel.Item key={movie.id}>
+              <Carousel.Item>
                 <img
                   className="d-block w-100"
                   src={`https://image.tmdb.org/t/p/original/${

@@ -14,7 +14,7 @@ const Cards = ({ movies }) => {
             {movies.map((movie) => {
                 return (
                   <Link onClick={() => {
-                  }} key={movie.id} to={`/moviedetails/${movie.id}`}>
+                  }}  to={`/moviedetails/${movie.id}`}>
                   <div className="imageContainer" id="main_image_container" style={{backgroundImage: movie.poster_path == null ?  "url(https://thumbs.dreamstime.com/b/no-image-available-icon-isolated-dark-background-simple-vector-logo-no-image-available-icon-isolated-dark-background-275079095.jpg)" : 
                   
                   `url(https://image.tmdb.org/t/p/original/${

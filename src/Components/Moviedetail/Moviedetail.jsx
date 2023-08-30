@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useState } from "react";
 import "./Moviedetail.css";
 import Image from "react-bootstrap/Image";
-import { credits, movieDetails, trailer } from "../../Functions/functions";
+import { allMoviedetails, credits, movieDetails, trailer } from "../../Functions/functions";
 import { useNavigate, useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { useDispatch, useSelector } from "react-redux";
@@ -19,9 +19,7 @@ const Moviedetail = () => {
 
   const navigate = useNavigate()
   useEffect(() => {
-    movieDetails(id, setMovie);
-    credits(id, dispatch);
-    trailer(id, dispatch,navigate);
+    allMoviedetails(id,dispatch,setMovie)
   }, [dispatch]);
 
   return (
@@ -112,7 +110,7 @@ const Moviedetail = () => {
             </div>
             <div className="youtubeContainer">
               <div className="youtube">
-              {videoKey  ? <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${videoKey}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              {videoKey  ? <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${videoKey}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullscreen></iframe>
                : <h1>Data Not Found</h1>}
               </div>
             </div>

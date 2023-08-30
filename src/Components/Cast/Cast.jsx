@@ -16,7 +16,7 @@ const Cast = () => {
       {cast &&
             cast.map((people) => {
               return (
-                <div key={people.id} className="casts">
+                <div className="casts">
 
                     <Avatar sx={{ width: 120, height: 120 }} alt={people.name} src={people.profile_path == null ? "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg" :`https://image.tmdb.org/t/p/original/${
                       people && people.profile_path
@@ -37,7 +37,7 @@ const Cast = () => {
       return (
         <div className="outer_cast_container">
             <div className="casts_image">
-              <img src={`https://image.tmdb.org/t/p/original/${
+              <img src={item.profile_path == null ? "https://i.pinimg.com/736x/83/bc/8b/83bc8b88cf6bc4b4e04d153a418cde62.jpg" :`https://image.tmdb.org/t/p/original/${
                       item && item.profile_path
                     }`}  alt="" />
             </div>

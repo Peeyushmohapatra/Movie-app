@@ -138,7 +138,15 @@ export async function horror(dispatch){
         type:"horror",
         data:arr
     })
+    return arr
 }
+
+export async function allFunctions(dispatch){
+    const all = Promise.allSettled([popular(dispatch),topRated(dispatch),action(dispatch),comedy(dispatch),horror(dispatch),upComing(dispatch),trending(dispatch)])
+    all.then((res) => {
+        console.log(res);
+    })
+} 
 
 
 export async function movieDetails(id,setMovie){
@@ -160,7 +168,6 @@ export async function credits(id,dispatch){
 
 export async function trailer(id,dispatch){
 
-    let arr = []
     const apiP1 = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=60265919315023ca09d63e81212e9157`);
     const response1 = await apiP1.text();
     const jsonData1 = JSON.parse(response1)
@@ -175,6 +182,14 @@ export async function trailer(id,dispatch){
         data:jsonData1.results[n-1].key
     })
   
+}
+
+
+export async function allMoviedetails(id,dispatch,setMovie){
+    Promise.allSettled([movieDetails(id, setMovie),credits(id, dispatch),trailer(id,dispatch)])
+    // movieDetails(id, setMovie);
+    // credits(id, dispatch);
+    // trailer(id, dispatch,navigate);
 }
 
 export function search(dispatch,input,all){

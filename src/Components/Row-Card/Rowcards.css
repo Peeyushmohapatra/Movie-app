@@ -118,9 +118,14 @@
       .trial1{
         border-radius: 20px;
       }
+
+      .react-loading-skeleton{
+        height: 200px;
+        width: 140px;
+      }
       .movie_cards1{
-        height: 170px;
-        width: 130px;
+        height: 220px;
+        width: 140px;
         cursor: pointer;
         transition: 1.4s ease;
         position: relative;
