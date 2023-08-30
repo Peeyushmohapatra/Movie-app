@@ -124,11 +124,12 @@
       }
 
       .react-loading-skeleton{
-        height: 220px;
+        height: 250px;
         width: 140px;
       }
+      
       .movie_cards1{
-        height: 220px;
+        height: 250px;
         width: 140px;
         cursor: pointer;
         transition: 1.4s ease;
