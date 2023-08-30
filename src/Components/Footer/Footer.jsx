@@ -67,7 +67,7 @@ const Footer = () => {
           className="text-center p-3"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
         >
-          © Movie Search App 2023 | Copyright:
+          © Movie App 2023 | Copyright:
           <a className="text-white" href="https://www.themoviedb.org/">
             {" "}
             www.themoviedb.org{" "}
