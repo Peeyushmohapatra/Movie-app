@@ -8,7 +8,13 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.new_skeletons{
+  height: 100%;
+  width: 100%;
   overflow: auto;
+
 }
 
 .movies_container h1 {
@@ -24,7 +30,7 @@
   margin: 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .movies_container {
     gap: 0;
   }
