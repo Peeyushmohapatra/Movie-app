@@ -1,221 +1,261 @@
-.div{
-    width: 100%;
-    background-color: black;
-    min-height: 90vh;
+.div {
+  width: 100%;
+  background-color: black;
+  min-height: 90vh;
 }
 
-.movieImageContainer{
-    height: 70vh;
+.movieImageContainer {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+  background-color: black;
+}
+
+.movieImageContainer img {
+  height: 100%;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0.354), rgba(0, 0, 0, 0.623));
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.overlay h1 {
+  font-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.7px white;
+}
+
+.movie-details-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 53%;
+  /* border: 2px solid red; */
+  width: 100%;
+  /* background:linear-gradient(to right, rgba(0, 0, 0, 0.45),black); */
+  background: linear-gradient(rgba(0, 0, 0, 0.132), #000);
+  /* background-color: transparent; */
+}
+
+.upper-container {
+  display: flex;
+  width: 100%;
+  /* background: linear-gradient(transparent,black); */
+  background: linear-gradient(rgba(0, 0, 0, 0.132), #000);
+}
+
+.movie-data-container h5 span { 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ background-color: #85FFBD;
+  font-weight: 800;
+}
+
+.lang h5{
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  font-weight: 800;
+  }
+
+  .highlight span{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    font-weight: 800; 
+  }
+
+.movie-poster-container {
+  height: 70vh;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.132), #000);
+}
+
+.overview h5{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    font-weight: 800; 
+}
+
+.movie-poster {
+  height: 80%;
+  max-width: 350px;
+  display: flex;
+  border-radius: 5px 20px 5px;
+}
+
+.movie-poster img {
+  height: 100%;
+  width: 243%;
+  box-shadow: 0.5rem 0.5rem red, -0.5rem -0.5rem rgb(13, 154, 252);
+}
+
+.movie-data-container {
+  height: 80vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.132), #000);
+}
+
+.lang {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.imdbic {
+  color: rgb(241, 207, 0);
+}
+
+.overview {
+  display: flex;
+  gap: 7px;
+}
+
+.cast-container {
+  width: 100%;
+  background-color: black;
+}
+
+.videoContainer {
+  height: 80vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.505);
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+
+.upperContainer {
+  height: 10%;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2%;
+  padding-top: 1%;
+}
+
+.youtubeContainer {
+  height: 90%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.336);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtube {
+  height: 80%;
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.457);
+}
+
+#span_details{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    font-weight: 600; 
+}
+
+.overview p{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    font-weight: 400; 
+}
+
+@media screen and (max-width: 500px) {
+  .movieImageContainer {
+    height: 50vh;
     width: 100%;
     display: flex;
     position: relative;
     background-color: black;
-}
+  }
 
-
-.movieImageContainer img{
-    height: 100%;
-    width: 100%;
-}
-
-.overlay{
-    position: absolute;
-    background:linear-gradient(rgba(0, 0, 0, 0.354),rgba(0, 0, 0, 0.623));
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .overlay h1 {
+    font-size: 2rem;
     padding: 0 1.5rem;
-}
+  }
 
-.overlay h1{
-    font-size: 4rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 0.7px white;
-}
-
-.movie-details-container{
+  .movie-details-container {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 53%;
-    /* border: 2px solid red; */
+    position: static;
+  }
+
+  .upper-container {
+    flex-direction: column;
+  }
+
+  .movie-poster-container {
+    height: 40vh;
     width: 100%;
-    /* background:linear-gradient(to right, rgba(0, 0, 0, 0.45),black); */
-    background: linear-gradient(rgba(0,0,0,.132),#000);
-    /* background-color: transparent; */
-}
+  }
 
-.upper-container{
-    display: flex;
-    width: 100%;
-    /* background: linear-gradient(transparent,black); */
-    background: linear-gradient(rgba(0,0,0,.132),#000);
-
-
-}
-
-.movie-poster-container{
-    height: 70vh;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background: linear-gradient(rgba(0,0,0,.132),#000);
-}
-
-.movie-poster{
-    height: 80%;
-    max-width: 350px;
-    display: flex;
-    border-radius: 5px 20px 5px;
-}
-
-.movie-poster img{
-    height: 100%;
-    width: 243%;
-    box-shadow: 0.5rem 0.5rem red, -0.5rem -0.5rem rgb(13,154,252);
-}
-
-.movie-data-container{
+  .movie-data-container {
     height: 80vh;
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1.5rem;
-    background: linear-gradient(rgba(0,0,0,.132),#000);
-}
+    padding: 1rem;
+    font-size: 0.7rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.132), #000);
+  }
 
+  .movie-data-container h5 {
+    font-size: 1rem;
+  }
 
-.lang{
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-}
+  .btn-outline-primary {
+    height: 30px;
+    font-size: 0.4rem;
+  }
 
-.imdbic{
-    color: rgb(241,207,0);
-}
+  .lang {
+    overflow: auto;
+  }
 
-.overview{
-    display: flex;
-    gap: 7px;
-}
+  .lang::-webkit-scrollbar {
+    display: none;
+  }
 
-.cast-container{
-    width: 100%;
-    background-color: black;
-}
-
-.videoContainer{
-    height: 80vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.505);
-    display: flex;
-    flex-direction: column;
-}
-
-.close-button{
-    position: absolute;
-    top: 1%;
-    right: 1%;
-}
-
-.upperContainer{
-    height: 10%;
-    width: 100%;
-    background-color: transparent;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2%;
-    padding-top: 1%;
-}
-
-.youtubeContainer{
-    height: 90%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.336);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.youtube{
+  .youtube {
     height: 80%;
-    width: 60%;
+    width: 95%;
     background-color: rgba(0, 0, 0, 0.457);
-}
-
-@media screen and (max-width : 500px) {
-    .movieImageContainer{
-        height: 50vh;
-        width: 100%;
-        display: flex;
-        position: relative;
-        background-color: black;
-    }
-
-    .overlay h1{
-        font-size: 2rem;
-        padding: 0 1.5rem;
-    }
-
-    .movie-details-container{
-        display: flex;
-        flex-direction: column;
-        position: static;
-    }
-
-    .upper-container{
-       flex-direction: column;
-    }
-
-    .movie-poster-container{
-        height: 40vh;
-        width: 100%;
-    }
-
-    .movie-data-container{
-        height: 80vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem;
-        font-size: 0.7rem;
-        background: linear-gradient(rgba(0,0,0,.132),#000);
-    }
-
-    .movie-data-container h5{
-        font-size: 1rem;
-    }
-
-    .btn-outline-primary{
-        height: 30px;
-        font-size: 0.4rem;
-    }
-
-    .lang{
-        overflow: auto;
-    }
-
-    .lang::-webkit-scrollbar {
-        display: none;
-    }
-
-    .youtube{
-        height: 80%;
-        width: 95%;
-        background-color: rgba(0, 0, 0, 0.457);
-    }
+  }
 }

@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import "./App.css";
-import Posterslider from "./Components/Image-Slider/Posterslider";
 import Navigationbar from "./Components/Navigationbar/Navigationbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useDispatch } from "react-redux";
@@ -11,10 +10,7 @@ import Popular from "./Components/Popular/Popular";
 import Toprated from "./Components/Top-Rated/Toprated";
 import Upcoming from "./Components/Upcoming/Upcoming";
 import Trending from "./Components/Trending/Trending";
-// import Moviedetail from "./Components/Moviedetail/Moviedetail";
-// import Details from "./Components/Moredetails/Details"
 import Moviedetail from "./Components/Moviedetail/Moviedetail";
-import Mymovie from "./Components/Mymovie/Mymovie";
 import Search from "./Components/Search/Search";
 import Comedy from "./Components/Comedy/Comedy";
 import Action from "./Components/Action/Action";

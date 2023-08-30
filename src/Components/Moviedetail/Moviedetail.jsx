@@ -59,8 +59,8 @@ const Moviedetail = () => {
           </div>
           <div className="movie-data-container">
             {/* <h1>{movie.original_title}</h1> */}
-            <h5>Status: {movie.status}</h5>
-            <h5>Status: {movie.release_date}</h5>
+            <h5><span>Status:</span> <span id="span_details">{movie.status}</span></h5>
+            <h5><span>Release Date:</span> <span id="span_details">{movie.release_date}</span></h5>
             <div className="lang">
               <h5>Languages: </h5>
               {movie.length !== 0 &&
@@ -72,7 +72,7 @@ const Moviedetail = () => {
                   );
                 })}
             </div>
-            <h5>Runtime: {movie.runtime} Minutes</h5>
+            <h5 className="highlight"><span>Runtime:</span> <span id="span_details">{movie.runtime} Minutes</span> </h5>
 
             <div className="lang">
               <h5>Genres: </h5>
@@ -81,13 +81,13 @@ const Moviedetail = () => {
                   return <Button variant="outline-primary">{ele.name}</Button>;
                 })}
             </div>
-            <h5>
-              Rating: {movie.length !== 0 && movie.vote_average.toFixed(0)}{" "}
+            <h5 className="highlight">
+              <span>Rating:</span> <span id="span_details">{movie.length !== 0 && movie.vote_average.toFixed(0)}</span>{" "}
               <i className="imdbic fa-brands fa-imdb"></i>
             </h5>
             <div className="overview">
               <h5>Description: </h5>
-              <p> {movie.overview}</p>
+              <p>{movie.overview}</p>
             </div>
             <div>
               <Button
