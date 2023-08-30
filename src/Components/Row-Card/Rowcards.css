@@ -112,7 +112,6 @@
         overflow-y: hidden;
         padding: 0 2rem;
         align-items: center;
-        
       }
 
       .trial1{
@@ -120,7 +119,7 @@
       }
 
       .react-loading-skeleton{
-        height: 200px;
+        height: 220px;
         width: 140px;
       }
       .movie_cards1{
