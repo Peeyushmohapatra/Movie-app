@@ -8,6 +8,21 @@
     padding: 0 2rem;
     align-items: center;
   }
+  .popularContainer::-webkit-scrollbar {
+    width: 7px;  
+    height: 10px;             /* width of the entire scrollbar */
+  }
+  
+  .popularContainer::-webkit-scrollbar-track {
+    background: black;        /* color of the tracking area */
+  }
+  
+  .popularContainer::-webkit-scrollbar-thumb {
+    background:linear-gradient(to right,rgb(13,154,252),red);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid black;  /* creates padding around scroll thumb */
+  }
+  
 
   .movie_cards1{
     height: 300px;
@@ -97,6 +112,7 @@
         overflow-y: hidden;
         padding: 0 2rem;
         align-items: center;
+        
       }
 
       .trial1{

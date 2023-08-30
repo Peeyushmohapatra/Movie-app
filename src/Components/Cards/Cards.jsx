@@ -1,8 +1,7 @@
 import React, { memo } from "react";
 import "./Cards.css";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 import { Link } from "react-router-dom";
+import Skeletons from "../Skeletons/Skeletons";
 
 
 
@@ -13,10 +12,8 @@ const Cards = ({ movies }) => {
         <>
             <div className="card_container">
             {movies.map((movie) => {
-              console.log(movie.poster_path);
                 return (
                   <Link onClick={() => {
-                    console.log(movie.poster_path === null);
                   }} key={movie.id} to={`/moviedetails/${movie.id}`}>
                   <div className="imageContainer" id="main_image_container" style={{backgroundImage: movie.poster_path == null ?  "url(https://thumbs.dreamstime.com/b/no-image-available-icon-isolated-dark-background-simple-vector-logo-no-image-available-icon-isolated-dark-background-275079095.jpg)" : 
                   
@@ -53,34 +50,7 @@ const Cards = ({ movies }) => {
             </div>
         </>
       ) : (
-        <div className="skeleton-container">
-          <Skeleton
-            style={{ borderRadius: " 30px" }}
-            width={200}
-            height={300}
-          />
-          <Skeleton
-            style={{ borderRadius: "30px" }}
-            width={200}
-            height={300}
-          />
-          <Skeleton
-            style={{ borderRadius: "30px" }}
-            width={200}
-            height={300}
-          />
-          <Skeleton
-            style={{ borderRadius: "30px" }}
-            width={200}
-            height={300}
-          />
-          <Skeleton
-            style={{ borderRadius: "30px" }}
-            width={200}
-            height={300}
-          />
-          {/* {<Skeleton count={10} />} */}
-        </div>
+        <Skeletons/>
       )}
     </>
   );
