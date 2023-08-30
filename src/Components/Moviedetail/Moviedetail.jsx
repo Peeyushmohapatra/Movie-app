@@ -28,15 +28,16 @@ const Moviedetail = () => {
     <div className="div">
       <div className="movieImageContainer">
         <img
-          src={`https://image.tmdb.org/t/p/original/${
+          src= {movie.backdrop_path == null ? "https://www.shutterstock.com/shutterstock/videos/1087269692/thumb/5.jpg?ip=x480" : `url(https://image.tmdb.org/t/p/original/${
             movie && movie.backdrop_path
-          }`}
+          })`}
           alt=""
         />
         <div className="overlay">
+          
           <h1
             style={{
-              backgroundImage: `url(https://image.tmdb.org/t/p/original/${
+              backgroundImage:`url(https://image.tmdb.org/t/p/original/${
                 movie && movie.backdrop_path
               })`,
             }}
@@ -50,7 +51,7 @@ const Moviedetail = () => {
           <div className="movie-poster-container">
             <div className="movie-poster">
               <img
-                src={`https://image.tmdb.org/t/p/original/${
+                src={movie.poster_path == null ? "https://thumbs.dreamstime.com/b/no-image-available-icon-isolated-dark-background-simple-vector-logo-no-image-available-icon-isolated-dark-background-275079095.jpg" : `https://image.tmdb.org/t/p/original/${
                   movie && movie.poster_path
                 }`}
                 alt=""

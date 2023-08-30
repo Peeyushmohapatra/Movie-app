@@ -7,7 +7,6 @@ const Comedy = () => {
     const comedy = useSelector((state) => {
         return state
     })
-    console.log(comedy);
   return (
         <div className='comedy'>
       <Posterslider showMovies={comedy.comedy}/>

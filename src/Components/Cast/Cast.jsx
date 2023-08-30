@@ -13,7 +13,6 @@ const Cast = () => {
   const cast = useSelector((state) => {
     return state.cast;
   });
-  console.log(cast);
   return (
     <>
     <div className="cast_container">
@@ -21,7 +20,7 @@ const Cast = () => {
       {cast &&
             cast.map((people) => {
               return (
-                <div className="casts">
+                <div key={people.id} className="casts">
 
                     <Avatar sx={{ width: 120, height: 120 }} alt={people.name} src={`https://image.tmdb.org/t/p/original/${
                       people && people.profile_path

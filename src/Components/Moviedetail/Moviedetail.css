@@ -258,7 +258,8 @@
 
   .btn-outline-primary {
     height: 30px;
-    font-size: 0.4rem;
+    font-size: 0.5rem;
+    font-weight: 500;
   }
 
   .lang {

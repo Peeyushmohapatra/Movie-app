@@ -13,11 +13,19 @@ const Cards = ({ movies }) => {
         <>
             <div className="card_container">
             {movies.map((movie) => {
+              console.log(movie.poster_path);
                 return (
-                  <Link to={`/moviedetails/${movie.id}`}>
-                  <div className="imageContainer" id="main_image_container" style={{backgroundImage:`url(https://image.tmdb.org/t/p/original/${
+                  <Link onClick={() => {
+                    console.log(movie.poster_path === null);
+                  }} key={movie.id} to={`/moviedetails/${movie.id}`}>
+                  <div className="imageContainer" id="main_image_container" style={{backgroundImage: movie.poster_path == null ?  "url(https://thumbs.dreamstime.com/b/no-image-available-icon-isolated-dark-background-simple-vector-logo-no-image-available-icon-isolated-dark-background-275079095.jpg)" : 
+                  
+                  `url(https://image.tmdb.org/t/p/original/${
                         movie && movie.poster_path
-                      })`}}>
+                      })`
+                } 
+                
+                }>
                     {/* <img
                       src={`https://image.tmdb.org/t/p/original/${
                         movie && movie.poster_path

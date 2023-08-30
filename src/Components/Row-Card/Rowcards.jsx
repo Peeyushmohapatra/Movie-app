@@ -10,8 +10,8 @@ const Rowcards = ({movies}) => {
     <div className="popularContainer">
         {movies.map((movie) => {
                 return (
-                  <Link to={`/moviedetails/${movie.id}`}>
-                  <div className="movie_cards1" style={{backgroundImage:`url(https://image.tmdb.org/t/p/original/${
+                  <Link key={movie.id} to={`/moviedetails/${movie.id}`}>
+                  <div className="movie_cards1" style={{backgroundImage: movie.poster_path == null ?  "url(https://thumbs.dreamstime.com/b/no-image-available-icon-isolated-dark-background-simple-vector-logo-no-image-available-icon-isolated-dark-background-275079095.jpg)" :`url(https://image.tmdb.org/t/p/original/${
                         movie && movie.poster_path
                       })`}}>
                     {/* <img

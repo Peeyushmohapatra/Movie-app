@@ -99,6 +99,9 @@
         align-items: center;
       }
 
+      .trial1{
+        border-radius: 20px;
+      }
       .movie_cards1{
         height: 170px;
         width: 130px;
