@@ -225,6 +225,12 @@
     width: 100%;
   }
 
+  .movie-poster img {
+    height: 100%;
+    width: 60%;
+    box-shadow: 0.5rem 0.5rem red, -0.5rem -0.5rem rgb(13, 154, 252);
+  }
+
   .movie-data-container {
     height: 80vh;
     width: 100%;
