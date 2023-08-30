@@ -28,9 +28,9 @@ const Moviedetail = () => {
     <div className="div">
       <div className="movieImageContainer">
         <img
-          src= {movie.backdrop_path == null ? "https://www.shutterstock.com/shutterstock/videos/1087269692/thumb/5.jpg?ip=x480" : `url(https://image.tmdb.org/t/p/original/${
+          src= {movie.backdrop_path === null ? "https://www.shutterstock.com/shutterstock/videos/1087269692/thumb/5.jpg?ip=x480" : `https://image.tmdb.org/t/p/original/${
             movie && movie.backdrop_path
-          })`}
+          }`}
           alt=""
         />
         <div className="overlay">
