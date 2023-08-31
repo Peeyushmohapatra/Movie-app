@@ -10,6 +10,36 @@
   gap: 20px;
 }
 
+.movies_container img{
+  height: 310px;
+  width: 301px;
+}
+
+#top-rated-image{
+  height: 200px;
+  width: 200px;
+}
+
+#comedy_movie_image{
+  height: 230px;
+  width: 320px;
+}
+
+#trending_movie_image{
+  height: 200px;
+  width: 180px;
+}
+
+#action_movie_image{
+  height: 220px;
+  width: 200px;
+}
+
+#popular_movie_image{
+  height: 220px;
+  width: 230px;
+}
+
 .new_skeletons{
   height: 100%;
   width: 100%;
