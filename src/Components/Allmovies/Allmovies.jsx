@@ -27,7 +27,7 @@ const Allmovies = () => {
             
         </div>
         <div className="upcoming_movie_container movies_container">
-          <h1>UPCOMING MOVIES <img src={upcoming} alt="" /></h1>
+          <h1>UPCOMING MOVIES <img id='upcoming_movie_image' src={upcoming} alt="" /></h1>
           {allMovies.upcoming.length !== 0 ? <Rowcards movies={allMovies.upcoming} /> : <div className='new_skeletons'><Skeletons/></div>}
          
             
@@ -53,7 +53,7 @@ const Allmovies = () => {
             
         </div>
         <div className="action_movie_container movies_container">
-          <h1>HORROR MOVIES <img src={horror} alt="" /></h1>
+          <h1>HORROR MOVIES <img id='horror_movie_image' src={horror} alt="" /></h1>
           {allMovies.horror.length !== 0 ? <Rowcards movies={allMovies.horror} /> : <div className='new_skeletons'><Skeletons/></div>}
             
         </div>

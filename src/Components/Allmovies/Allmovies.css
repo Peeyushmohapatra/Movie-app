@@ -44,7 +44,6 @@
   height: 100%;
   width: 100%;
   overflow: auto;
-
 }
 
 .movies_container h1 {
@@ -68,5 +67,44 @@
   .react-loading-skeleton {
     height: 220px !important;
     width: 140px !important;
+  }
+
+  .movies_container img{
+    height: 310px;
+    width: 301px;
+  }
+  
+  #top-rated-image{
+    height: 55px;
+    width: 50px;
+  }
+  
+  #comedy_movie_image{
+    height:60px;
+    width: 90px;
+  }
+  
+  #trending_movie_image{
+    height: 60px;
+    width: 60px;
+  }
+  
+  #action_movie_image{
+    height: 70px;
+    width: 60px;
+  }
+  #popular_movie_image{
+    height: 70px;
+    width: 70px;
+  }
+
+  #horror_movie_image{
+    height: 70px;
+    width: 70px;
+  }
+
+  #upcoming_movie_image{
+    height: 70px;
+    width: 70px;
   }
 }
