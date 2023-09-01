@@ -34,7 +34,7 @@ const Posterslider = ({showMovies}) => {
                         <h3>
                           <span className="imdb_icon"><i className="imdbicon fa-brands fa-imdb"></i></span>
                           {" "}
-                          {movie.vote_average}
+                          {movie.vote_average.toFixed(1)}
                         </h3>
                       </div>
                       <span>{movie.overview}</span>

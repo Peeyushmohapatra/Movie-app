@@ -26,12 +26,12 @@
 }
 #upcoming_movie_image{
   height: 210px;
-  width: 250px;
+  width: 170px;
 }
 
 #trending_movie_image{
   height: 180px;
-  width: 180px;
+  width: 230px;
 }
 
 #action_movie_image{

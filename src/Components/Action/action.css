@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies&display=swap");
+.actionHeading {
+  text-align: center;
+  background-image: url("https://i.pinimg.com/originals/4a/d7/37/4ad7371efc8dc774ba1c0edefe1b1ff8.png");
+  /* background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%); */
+  font-size: 4rem;
+  background-position: 42% 50%;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.1px lightyellow;
+  font-family: "Rowdies", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action h1 img {
+  margin-top: 20px;
+  height: 120px;
+}
+
+@media screen and (max-width: 600px) {
+  .action h1 img {
+    height: 50px;
+  }
+  .actionHeading {
+    font-size: 2rem;
+    margin: 0;
+  }
+}

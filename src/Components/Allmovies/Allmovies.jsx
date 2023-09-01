@@ -1,4 +1,4 @@
-import React, { memo,lazy,Suspense } from 'react'
+import React, { memo } from 'react'
 import "./Allmovies.css"
 import { useSelector } from 'react-redux';
 import Posterslider from '../Image-Slider/Posterslider';
@@ -10,7 +10,7 @@ import trending from "../../Logo/trending.png"
 import horror from "../../Logo/horror.png"
 import popular from "../../Logo/Popular.png"
 import toprated from "../../Logo/top-rated.png"
-import upcoming from "../../Logo/Upcoming.png"
+import upcoming from "../../Logo/upcoming-image.png"
  
 const Allmovies = () => {
     const allMovies = useSelector((state) => {

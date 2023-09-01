@@ -1,14 +1,16 @@
-.trendingHeading{
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.comedyHeading{
     text-align: center;
-    background-image: url("https://free4kwallpapers.com/uploads/originals/2020/05/17/avengers-infinity-war-wallpaper.jpg");
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/893/113/263/smile-precure-smile-dark-demon-minimalism-hd-wallpaper-preview.jpg");
     /* background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%); */
     font-size: 4rem;
-    background-position: 50% 47%;
+    background-position: 70% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    -webkit-text-stroke: 0.1px lightyellow;
     font-family: 'Anton', sans-serif;
     display: flex;
     align-items: center;
@@ -16,17 +18,18 @@
     margin: 0;
   }
 
-.trending_comp h1 img{
+.comedy h1 img{
     margin-top: 20px;
     height: 120px;
-    
 }
 
+
 @media screen and (max-width: 600px) {
-  .trending_comp h1 img{
-    height: 50px;
-}
-.trendingHeading{
-  font-size: 1.8rem;
-}
+  .comedy h1 img {
+    height: 70px;
+    margin: 0;
+  }
+  .comedyHeading {
+    font-size: 1.7rem;
+  }
 }

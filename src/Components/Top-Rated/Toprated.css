@@ -1,0 +1,34 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.topratedHeading{
+    text-align: center;
+    background-image: url("https://wallpapers.com/images/featured/4k-avengers-gx5riyd6eqklm4hf.jpg");
+    /* background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%); */
+    font-size: 4rem;
+    background-position: 20% 65%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 0.1px lightyellow;
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toprated h1 img{
+    margin-top: 20px;
+    height: 120px;
+}
+
+@media screen and (max-width: 600px) {
+  .toprated h1 img {
+    height: 70px;
+    margin: 0;
+  }
+  .topratedHeading {
+    font-size: 2rem;
+  }
+}

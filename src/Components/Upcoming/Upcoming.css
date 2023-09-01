@@ -1,0 +1,29 @@
+.upcomingHeading{
+    text-align: center;
+    background-image: url("https://wallpapers.com/images/featured/4k-avengers-gx5riyd6eqklm4hf.jpg");
+    /* background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%); */
+    font-size: 4rem;
+    background-position:20% 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 0.1px lightyellow;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+.upcoming h1 img{
+    margin-top: 20px;
+    height: 120px;
+}
+
+@media screen and (max-width: 600px) {
+  .upcoming h1 img {
+    height: 70px;
+    margin: 0;
+  }
+  .upcomingHeading {
+    font-size: 2rem;
+  }
+}

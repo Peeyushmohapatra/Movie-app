@@ -36,9 +36,8 @@
   text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
- background-color: #4158D0;
-background-image: linear-gradient(to right, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-
+  background-color: #4158D0;
+  background-image: linear-gradient(to right, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
   font-weight:700;
 }
 
